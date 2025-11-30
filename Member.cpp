@@ -1,3 +1,7 @@
+// Member Class Implementation
+// Developer: Asad Ullah Shah (15196)
+// Description: Handles member data and operations
+
 #include "Member.h"
 #include <iostream>
 #include <sstream>
