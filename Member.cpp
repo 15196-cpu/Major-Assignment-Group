@@ -1,18 +1,18 @@
-// Member Class Implementation
-// Developer: Asad Ullah Shah (15196)
-// Description: Handles member data and operations
-
-// Date: 2025-12-02
-// Review Member.cpp
-
-
-
+/*
+ * ============================================================================
+ * File: Member.cpp
+ * Author: Asad Ullah Shah (15196)
+ * Date: December 2, 2025
+ * Description: Implementation of Member class for Campus Club Manager
+ *              Handles member registration, data management, and display
+ * ============================================================================
+ */
 
 #include "Member.h"
 #include <iostream>
 #include <sstream>
 
-// Default constructor
+// Default constructor - initializes all member attributes to empty values
 Member::Member() {
     memberId = "";
     name = "";
@@ -21,7 +21,7 @@ Member::Member() {
     clubName = "";
 }
 
-// Parameterized constructor
+// Parameterized constructor - creates member with provided details
 Member::Member(string id, string n, string e, string p, string club) {
     memberId = id;
     name = n;
@@ -30,21 +30,21 @@ Member::Member(string id, string n, string e, string p, string club) {
     clubName = club;
 }
 
-// Getters
+// Getter methods - provide read-only access to private data
 string Member::getMemberId() const { return memberId; }
 string Member::getName() const { return name; }
 string Member::getEmail() const { return email; }
 string Member::getPhone() const { return phone; }
 string Member::getClubName() const { return clubName; }
 
-// Setters
+// Setter methods - allow controlled modification of member data
 void Member::setMemberId(string id) { memberId = id; }
 void Member::setName(string n) { name = n; }
 void Member::setEmail(string e) { email = e; }
 void Member::setPhone(string p) { phone = p; }
 void Member::setClubName(string club) { clubName = club; }
 
-// Display member information
+// Display member information in formatted output
 void Member::displayMember() const {
     cout << "\n=================================\n";
     cout << "Member ID: " << memberId << endl;
@@ -55,7 +55,7 @@ void Member::displayMember() const {
     cout << "=================================\n";
 }
 
-// Convert to string for file storage (comma separated)
+// Convert member data to string format for file storage
 string Member::toString() const {
     stringstream ss;
     ss << memberId << "," << name << "," << email << "," 
